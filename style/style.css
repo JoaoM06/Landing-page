@@ -38,7 +38,7 @@ header img{
     font-weight: 600;
     font-family: "Roboto", sans-serif;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 1em 2em;
     background-color: transparent;
     border-radius: 5px;
     color: black;
@@ -60,11 +60,11 @@ header img{
 }
 
 main{
-    height: 500px;   
+    height: 75vh;   
 }
 
 main img{
-    height: 500px;
+    height: 75vh;
     width: 100%;
     opacity: 80%;
     filter: brightness(40%);
@@ -112,7 +112,7 @@ main img{
     font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: 600;
-    padding: 20px 40px;
+    padding: 1em 2em;
     background-color: #6DE87D;
     color: white;
     border-radius: 5px;
@@ -205,25 +205,26 @@ main img{
 }
 
 .servicosCards{
-    display: flex;
-    flex-flow: nowrap;
-    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 30px;
+    width: 80vw;
     margin-bottom: 20px;
 }
 
 .servicosCard{
     background-color: white;
-    margin: 0px 30px;
+    margin: 20px;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
-    flex: 20%;
 }
 
 .servicosCard h3{
     font-family: "Roboto", sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 600;
 }
 
@@ -236,11 +237,65 @@ main img{
 }
 
 .servicosCard i{
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 20px;
 }
 
-/* Teste github */
+.servicosContainer a{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 1em 2em;
+    background-color: #6DE87D;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.servicosContainer a:hover{
+    transform: scale(1.1);
+    background-color: #4BC160;
+}
+
+.clientesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    overflow-x: hidden;
+}
+
+.clientesContainer h2{
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    border-bottom: solid 3px black;
+    width: fit-content;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.clientesGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+}
+
+.clientesLogo{
+    margin: 30px;
+}
+
+.clientesLogo img{
+    width: 150px;
+    height: auto;
+}
 
 
 
@@ -271,7 +326,6 @@ main img{
         font-size: 12vw;
         margin: 3vw 3vw;
     }
-
     .mainContent h2{
         font-size: 5vw;
         margin: 0px 3vw;
@@ -280,8 +334,7 @@ main img{
         width: 40vw;
     }
     .mainContent a{
-        font-size: 3.2vw;
-        padding: 17px 35px;
+        font-size: 3.8vw;
     }
     .moreInfo h2{
         font-size: 20px;
@@ -309,6 +362,22 @@ main img{
     }
     .servicosCard h3{
         font-size: 35px;
+    }
+    .servicosCards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 90vw;
+    }
+    .clientesContainer h2{
+        font-size: 50px;
+    }
+    .clientesGrid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .clientesLogo img{
+        width: 150px;
     }
 }
 
@@ -357,6 +426,24 @@ main img{
         font-size: 18px;
         margin-top: 20px;
     }
+    .servicosCards{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .clientesContainer h2{
+        font-size: 50px;
+    }
+    .clientesGrid{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    .clientesLogo{
+        margin: 15px;
+    }
+    .clientesLogo img{
+        width: 200px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px){
@@ -370,4 +457,59 @@ main img{
         .mainContent h2{
             margin: 0 3vw;
         }
+        .servicosCards{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .clientesLogo{
+            margin: 15px;
+        }
+        .clientesLogo img{
+            width: 100px;
+        }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px){
+    .servicosCards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .clientesLogo img{
+        width: 120px;
+    }
+}
+
+@media (min-width: 1201px){
+    .navBar a{
+        margin: 0px 40px;
+    }
+    .mainContent h1{
+        font-size: 85px;
+    }
+    .mainContent h2{
+        font-size: 35px;
+    }
+    .mainContent a{
+        font-size: 23px;
+    }
+    .moreInfo h2{
+        font-size: 35px;
+    }
+    .sobreNos h2{
+        font-size: 75px;
+    }
+    .sobreNos p{
+        font-size: 30px;
+    }
+    .servicosContainer h2{
+        font-size: 75px;
+    }
+    .servicosContainer a{
+        font-size: 23px;
+    }
+    .clientesContainer h2{
+        font-size: 75px;
+    }
 }
