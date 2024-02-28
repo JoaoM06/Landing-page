@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    height: 90px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+}
+
+header img{
+    width: 85px;
+}
+.navBar a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    margin: 0px 25px;
+    color: black;
+}
+
+.telBtn a{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: transparent;
+    border-radius: 5px;
+    color: black;
+    margin: 0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+}
+.telBtn{
+    transition: .5s;
+}
+
+.telBtn:hover{
+    transform: scale(1.05);
+}
+
+.telBtn a:hover{
+    background-color: #6DE87D;
+    color: white;
+}
+
+main{
+    height: 500px;   
+}
+
+main img{
+    height: 500px;
+    width: 100%;
+    opacity: 80%;
+    filter: brightness(40%);
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.mainContent{
+    display: flex;
+    position: relative;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContent h1{
+    font-family: "Anuphan", sans-serif;
+    font-size: 75px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mainContent h2{
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+
+.mainContent hr{
+    width: 400px;
+    height: 3px;
+    background-color: white;
+    border: none;
+    margin: 10px 0px;
+}
+
+.mainContent a{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px 40px;
+    background-color: #6DE87D;
+    color: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mainContent a:hover{
+    transform: scale(1.1);
+    background-color: #4BC160;
+}
+
+.moreInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #546E58;
+    text-align: center;
+}
+
+.moreInfo h2{
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    margin: 0px 20px;
+}
+
+.sobreNosContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left:7vw;
+    margin-right: 7vw;
+    margin-bottom: 50px;
+}
+
+.sobreNos{
+    flex: 50%;
+}
+
+.sobreNos h2{
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    border-bottom: solid 3px black;
+    width: fit-content;
+}
+
+.sobreNos p{
+    color: #7a7a7a;
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 3vw;
+}
+
+.sobreNosImg{
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobreNosImg img{
+    width: 30vw;
+    height: auto;
+}
+
+.servicosContainer{
+    background-color: #c8f1d470;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicosContainer h2{
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    border-bottom: solid 3px black;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+.servicosCards{
+    display: flex;
+    flex-flow: nowrap;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.servicosCard{
+    background-color: white;
+    margin: 0px 30px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    flex: 20%;
+}
+
+.servicosCard h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.servicosCard p{
+    font-family: "roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    margin-top: 20px;
+}
+
+.servicosCard i{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* Media Querys */
+
+@media (max-width: 480px){
+    header img{
+        width: 90px;
+    }
+    .navBar{
+        display: none;
+    }
+    .telBtn a{
+        font-size: 3vw;
+        background-color: #6DE87D;
+        color: white;
+    }
+    main{
+        height: 400px;
+    }
+    main img{
+        height: 400px;
+    }
+    .mainContent h1{
+        font-size: 12vw;
+        margin: 3vw 3vw;
+    }
+
+    .mainContent h2{
+        font-size: 5vw;
+        margin: 0px 3vw;
+    }
+    .mainContent hr{
+        width: 40vw;
+    }
+    .mainContent a{
+        font-size: 3.2vw;
+        padding: 17px 35px;
+    }
+    .moreInfo h2{
+        font-size: 20px;
+    }
+    .sobreNosImg{
+        display: none;
+    }
+    .sobreNos h2{
+        font-size: 50px;
+    }
+    .sobreNos p{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .servicosContainer h2{
+        font-size: 50px;
+        margin-bottom: 50px;
+    }
+    .servicosCards{
+        margin-bottom: 0px;
+        margin-top: 0px
+    }
+    .servicosCard{
+        margin-bottom: 50px;
+    }
+    .servicosCard h3{
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px){
+    header{
+        justify-content: space-around;
+    }
+    .navBar{
+        display: none;
+    }
+    .telBtn a{
+        font-size: 16px;
+        background-color: #6DE87D;
+        color: white;
+    }
+    main{
+        height: 500px;
+    }
+    main img{
+        height: 500px;
+    }
+    .mainContent h1{
+        font-size: 10vw;
+        margin: 3vw 3vw;
+    }
+    .mainContent h2{
+        font-size: 4.5vw;
+        margin: 0 3vw;
+    }
+    .mainContent hr{
+        width: 40vw;
+    }
+    .mainContent a{
+        font-size: 3vw;
+    }
+    .moreInfo h2{
+        font-size: 25px;
+    }
+    .sobreNosImg{
+        display: none;
+    }
+    .sobreNos h2{
+        font-size: 50px;
+    }
+    .sobreNos p{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+        .navBar a{
+            margin: 0px 12px;
+        }
+
+        .telBtn a{
+            font-size: 18px;
+        }
+        .mainContent h2{
+            margin: 0 3vw;
+        }
+}
