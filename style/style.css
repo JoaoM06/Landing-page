@@ -297,6 +297,11 @@ main img{
     height: auto;
 }
 
+.logoClientes img{
+    width: 80vw;
+    margin-top: 30px;
+}
+
 
 
 
@@ -369,6 +374,9 @@ main img{
         grid-template-rows: 1fr 1fr 1fr 1fr;
         width: 90vw;
     }
+    .servicosContainer a{
+        font-size: 15px;
+    }
     .clientesContainer h2{
         font-size: 50px;
     }
@@ -430,6 +438,9 @@ main img{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .servicosContainer a{
+        font-size: 18px;
     }
     .clientesContainer h2{
         font-size: 50px;
