@@ -60,11 +60,11 @@ header img{
 }
 
 main{
-    height: 75vh;   
+    height: 600px;   
 }
 
 main img{
-    height: 75vh;
+    height: 600px;
     width: 100%;
     opacity: 80%;
     filter: brightness(40%);
@@ -87,7 +87,7 @@ main img{
     font-size: 75px;
     font-weight: 700;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
@@ -116,7 +116,7 @@ main img{
     background-color: #6DE87D;
     color: white;
     border-radius: 5px;
-    margin-top: 40px;
+    margin-top: 60px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: .5s;
     text-align: center;
@@ -267,7 +267,8 @@ main img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
     overflow-x: hidden;
 }
 
@@ -297,9 +298,43 @@ main img{
     height: auto;
 }
 
-.logoClientes img{
-    width: 80vw;
-    margin-top: 30px;
+.galeriaContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F6F6F6;
+}
+
+.galeriaContainer h2{
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    border-bottom: solid 3px black;
+    width: fit-content;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.galeria{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    gap: 20px
+}
+
+.galeria img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    transition-duration: .5s;
+}
+
+.galeria img:hover{
+    transform: scale(1.2);
 }
 
 
@@ -375,17 +410,40 @@ main img{
         width: 90vw;
     }
     .servicosContainer a{
-        font-size: 15px;
+        font-size: 14px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     .clientesContainer h2{
-        font-size: 50px;
+        font-size: 45px;
     }
     .clientesGrid{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        overflow: hidden;
+    }
+    .clientesLogo{
+        margin: 15px;
     }
     .clientesLogo img{
-        width: 150px;
+        width: 80px;
+    }
+    #ultimaLogo{
+        display: none;
+    }
+    .galeriaContainer h2{
+        font-size: 45px;
+    }
+    .galeriaContainer{
+        gap: 10px;
+    }
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .galeria img{
+        width: 140px;
+        height: 140px;
     }
 }
 
@@ -446,14 +504,21 @@ main img{
         font-size: 50px;
     }
     .clientesGrid{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
     .clientesLogo{
         margin: 15px;
     }
     .clientesLogo img{
-        width: 200px;
+        width: 70px;
+    }
+    .galeriaContainer h2{
+        font-size: 50px;
+    }
+    .galeria img{
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -461,9 +526,11 @@ main img{
         .navBar a{
             margin: 0px 12px;
         }
-
         .telBtn a{
             font-size: 18px;
+        }
+        .mainContent h1{
+            font-size: 55px;
         }
         .mainContent h2{
             margin: 0 3vw;
@@ -478,6 +545,13 @@ main img{
         }
         .clientesLogo img{
             width: 100px;
+        }
+        .galeriaContainer{
+            gap: 10px;
+        }
+        .galeria img{
+            width: 200px;
+            height: 200px;
         }
 }
 
@@ -497,10 +571,10 @@ main img{
         margin: 0px 40px;
     }
     .mainContent h1{
-        font-size: 85px;
+        font-size: 80px;
     }
     .mainContent h2{
-        font-size: 35px;
+        font-size: 30px;
     }
     .mainContent a{
         font-size: 23px;
@@ -521,6 +595,9 @@ main img{
         font-size: 23px;
     }
     .clientesContainer h2{
+        font-size: 75px;
+    }
+    .galeriaContainer h2{
         font-size: 75px;
     }
 }
