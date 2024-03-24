@@ -82,6 +82,12 @@ main img{
     justify-content: center;
 }
 
+@keyframes fadeIn{
+    from {right: 120vw;}
+
+    to {right: 0}
+}
+
 .mainContent h1{
     font-family: "Anuphan", sans-serif;
     font-size: 75px;
@@ -89,14 +95,25 @@ main img{
     color: white;
     margin-bottom: 10px;
     text-align: center;
+    position: relative;
+    right: 120vw;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 .mainContent h2{
     font-family: "Roboto", sans-serif;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 600;
     color: white;
     text-align: center;
+    position: relative;
+    right: 120vw;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
 }
 
 .mainContent hr{
@@ -105,6 +122,12 @@ main img{
     background-color: white;
     border: none;
     margin: 10px 0px;
+    position: relative;
+    right: 120vw;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
 }
 
 .mainContent a{
@@ -121,6 +144,12 @@ main img{
     transition: .5s;
     text-align: center;
     margin-bottom: 10px;
+    position: relative;
+    right: 120vw;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
 }
 
 .mainContent a:hover{
@@ -149,7 +178,7 @@ main img{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 80px;
+    margin-top: 120px;
     margin-left:7vw;
     margin-right: 7vw;
     margin-bottom: 50px;
@@ -321,7 +350,8 @@ main img{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     place-items: center;
-    gap: 20px
+    gap: 20px;
+    margin-bottom: 100px;
 }
 
 .galeria img{
@@ -336,6 +366,248 @@ main img{
 .galeria img:hover{
     transform: scale(1.2);
 }
+
+.porqueContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.porqueContainer img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 80%;
+    filter: brightness(40%);
+    position: relative;
+}
+
+.porqueContainer h2{
+    position: absolute;
+    top: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    border-bottom: solid 3px white;
+    width: fit-content;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+.porqueCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    width: 95%;
+    gap: 20px;
+    position: absolute;
+    margin-top: 20px;
+    bottom: 30px;
+}
+
+.porqueCard{
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: white;
+}
+
+.porqueCard h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.porqueCard i{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #6DE87D;
+}
+
+.porqueCard p{
+    font-family: "roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+    margin-top: 20px;
+}
+
+.contatoContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.contato{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contatoFormContainer{
+    border-radius: 15px;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(190, 190, 190),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    padding: 35px;
+    width: 45%;
+}
+
+.contatoContainer h2{
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+    border-bottom: solid 3px black;
+    width: fit-content;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contato h3{
+    font-family: "Roboto", sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contatoForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contatoForm input, textarea{
+    margin: 10px 0px;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    outline: none;
+    transition: .3s;
+    width: 100%;
+}
+
+.contatoForm textarea{
+    height: 160px;
+    resize: none;
+}
+
+.contatoForm ::placeholder{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+.contatoForm :focus{
+    border: 3px solid #6DE87D;
+    box-shadow: 1px 1px 3px #6DE87D;
+}
+
+.contatoForm button{
+    width: 40%;
+    margin-top: 20px;
+    padding: 1em 1em;
+    border-radius: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #6DE87D;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.contatoForm button:hover{
+    background-color: #4BC160;
+}
+
+.contatoInfoContainer{
+    border: solid 30x black;
+    width: 45%;
+    position: relative;
+}
+
+.contatoInfoCard{
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(190, 190, 190),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.contatoInfoCard i{
+    color: #6DE87D;
+    font-size: 70px;
+}
+
+.contatoInfoCard h3{
+    font-size: 35px;
+    margin-top: 30px;
+}
+
+.relacionadosContainer{
+    position: relative;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.relacionadosContainer.noAnimation{
+    scroll-behavior: auto;
+}
+
+.relacionados{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100%/3);
+    margin-top: 30px;
+    max-width: 100vw;
+    place-items: center;
+}
+
+.relacionados .img img{
+    width: 120px;
+    scroll-snap-align: center;
+    padding: 10px;
+}
+
+.arrowContainer{
+    position: relative;
+}
+
+.arrowContainer i{
+    position: absolute;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#arrowRight{
+    top: 50%;
+    right: 0;
+}
+
+#arrowLeft{
+    top: 50%;
+    left: 0;
+}
+
+
 
 
 
@@ -445,6 +717,68 @@ main img{
         width: 140px;
         height: 140px;
     }
+    .porqueContainer img{
+        height: 1370px;
+    }
+    .porqueContainer h2{
+        font-size: 45px;
+        border: none;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .porqueCards{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 95%;
+    }
+    .porqueCard i{
+        font-size: 40px;
+    }
+    .porqueCard h3{
+        font-size: 35px;
+    }
+    .porqueCard p{
+        font-size: 15px
+    }
+    .contato{
+        flex-direction: column;
+    }
+    .contatoFormContainer{
+        width: 90%;
+    }
+    .contatoContainer h2{
+        font-size: 45px;
+    }
+    .contatoFormContainer h3{
+        font-size: 35px;
+        margin-top: 15px;
+    }
+    .contatoFormContainer button{
+        width: 70%;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .contatoFormContainer{
+        padding: 15px;
+    }
+    .contatoInfoContainer{
+        width: 90%;
+        margin-top: 60px;
+    }
+    .contatoInfoCard h3{
+        font-size: 28px;
+    }
+    .relacionadosContainer{
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+    }
+    .relacionados{
+        grid-auto-columns: 100%;
+    }
+    .relacionados .img img{
+        width: 150px;
+    }
 }
 
 @media (min-width: 481px) and (max-width: 768px){
@@ -517,8 +851,62 @@ main img{
         font-size: 50px;
     }
     .galeria img{
+        width: 140px;
+        height: 140px;
+    }
+    .porqueContainer{
+        height: 800px;
+    }
+    .porqueContainer img{
+        height: 100%;
+    }
+    .porqueContainer h2{
+        font-size: 50px;
+        border: none;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        margin-top: 0;
+        top: 25px;
+    }
+    .porqueCards{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 90%;
+        height: 70%;
+        bottom: 60px;
+    }
+    .porqueCard{
+        padding: 20px 10px;
+        margin: 0;
+    }
+    .porqueCard i{
+        font-size: 40px;
+    }
+    .porqueCard h3{
+        font-size: 30px;
+    }
+    .porqueCard p{
+        font-size: 15px
+    }
+    .contato{
+        flex-direction: column;
+    }
+    .contatoFormContainer{
+        width: 80%;
+    }
+    .contatoInfoContainer{
+        width: 80%;
+        margin-top: 60px;
+    }
+    .contatoInfoCard h3{
+        font-size: 30px;
+    }
+    .relacionados{
+        grid-auto-columns: calc(100%/2);
+    }
+    .relacionados .img img{
         width: 150px;
-        height: 150px;
     }
 }
 
@@ -553,6 +941,36 @@ main img{
             width: 200px;
             height: 200px;
         }
+        .porqueContainer{
+            height: 850px;
+        }
+        .porqueContainer img{
+            height: 850px;
+        }
+        .porqueCards{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            width: 80%;
+        }
+        .porqueCard h3{
+            font-size: 30px;
+        }
+        .contato{
+            flex-direction: column;
+        }
+        .contatoFormContainer{
+            width: 75%;
+        }
+        .contatoInfoContainer{
+            width: 75%;
+            margin-top: 60px;
+        }
+        .contatoInfoCard h3{
+            font-size: 30px;
+        }
+        .relacionados img{
+            width: 95px;
+        }
 }
 
 @media (min-width: 1025px) and (max-width: 1200px){
@@ -563,6 +981,12 @@ main img{
     }
     .clientesLogo img{
         width: 120px;
+    }
+    .porqueCards{
+        width: 95%;
+    }
+    .porqueCard h3{
+        font-size: 32px;
     }
 }
 
@@ -577,7 +1001,7 @@ main img{
         font-size: 30px;
     }
     .mainContent a{
-        font-size: 23px;
+        font-size: 22px;
     }
     .moreInfo h2{
         font-size: 35px;
@@ -598,6 +1022,9 @@ main img{
         font-size: 75px;
     }
     .galeriaContainer h2{
+        font-size: 75px;
+    }
+    .porqueContainer h2{
         font-size: 75px;
     }
 }
