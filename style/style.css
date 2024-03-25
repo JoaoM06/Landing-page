@@ -583,7 +583,6 @@ main img{
 .relacionados .img img{
     width: 120px;
     scroll-snap-align: center;
-    padding: 10px;
 }
 
 .arrowContainer{
@@ -968,8 +967,8 @@ main img{
         .contatoInfoCard h3{
             font-size: 30px;
         }
-        .relacionados img{
-            width: 95px;
+        .relacionados .img img{
+            width: 120px;
         }
 }
 
