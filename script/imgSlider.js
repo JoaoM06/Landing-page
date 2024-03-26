@@ -10,8 +10,6 @@ const arrowLeft = document.querySelector("#arrowLeft")
 
 function moveRight(){
     relacionadosContainer.scrollLeft += (itemWidth + 70)
-    console.log(relacionadosContainerScrlWidth - relacionadosContainerWidth)
-    console.log(`scrollLeft:${relacionadosContainer.scrollLeft}`)
 
     if(relacionadosContainer.scrollLeft >= (relacionadosContainerScrlWidth - relacionadosContainerWidth - 1)){
         relacionadosContainer.classList.add("noAnimation")
