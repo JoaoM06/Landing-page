@@ -37,3 +37,25 @@ intervalId = setInterval(moveRight, 6000)
 
 arrowRight.addEventListener("click", moveRight)
 arrowLeft.addEventListener("click", moveLeft)
+
+
+// Navbar e voltar ao topo:
+
+const voltarInicio = document.querySelector(".footerUpIcon i")
+const bodyScrl = document.querySelector("*")
+const home = document.querySelector("#home")
+const services = document.querySelector("#services")
+const info = document.querySelector("#info")
+const contact = document.querySelector("#contact")
+
+const servicesPosition = document.querySelector(".servicosContainer").getBoundingClientRect()
+const clientesPosition = document.querySelector(".clientesContainer").getBoundingClientRect()
+const contatoPosition = document.querySelector(".contatoContainer").getBoundingClientRect()
+
+
+
+voltarInicio.addEventListener("click", ()=>{bodyScrl.scrollTop = 0})
+home.addEventListener("click", ()=>{bodyScrl.scrollTop = 0})
+services.addEventListener("click", ()=>{bodyScrl.scrollTop = servicesPosition.top})
+info.addEventListener("click", ()=>{bodyScrl.scrollTop = clientesPosition.top})
+contact.addEventListener("click", ()=>{bodyScrl.scrollTop = contatoPosition.top})
