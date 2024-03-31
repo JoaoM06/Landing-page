@@ -60,11 +60,11 @@ header img{
 }
 
 main{
-    height: 600px;   
+    height: 85vh;   
 }
 
 main img{
-    height: 600px;
+    height: 85vh;
     width: 100%;
     opacity: 80%;
     filter: brightness(40%);
