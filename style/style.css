@@ -48,8 +48,20 @@ header img{
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: .5s;
 }
+
+.telBtn svg{
+    width: 1.1em;
+    margin-right: 0.2em;
+}
+
 .telBtn{
     transition: .5s;
+}
+
+.telBtn a{
+    transition: .5s;
+    display: flex;
+    align-items: center;
 }
 
 .telBtn:hover{
@@ -59,6 +71,7 @@ header img{
 .telBtn a:hover{
     background-color: #6DE87D;
     color: white;
+    fill: #FFFFFF;
 }
 
 main{
@@ -267,8 +280,8 @@ main img{
     margin-top: 20px;
 }
 
-.servicosCard i{
-    font-size: 50px;
+.servicosCard img{
+    width: 50px;
     margin-bottom: 20px;
 }
 
@@ -375,7 +388,21 @@ main img{
     align-items: center;
     justify-content: center;
     position: relative;
+    padding-bottom: 50px;
 }
+
+.porqueContainer::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(/imgs/background2.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 80%;
+    filter: brightness(40%);
+}
+
 .porqueContainer img{
     height: 600px;
     width: 100%;
@@ -387,8 +414,6 @@ main img{
 }
 
 .porqueContainer h2{
-    position: absolute;
-    top: 0;
     font-family: "Oswald", sans-serif;
     font-size: 60px;
     font-weight: 600;
@@ -406,7 +431,6 @@ main img{
     grid-template-rows: 1fr;
     width: 95%;
     gap: 20px;
-    position: absolute;
     margin-top: 20px;
     bottom: 30px;
 }
@@ -421,14 +445,16 @@ main img{
 
 .porqueCard h3{
     font-family: "Roboto", sans-serif;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 600;
 }
 
-.porqueCard i{
-    font-size: 50px;
+.porqueCard img{
+    width: 70px;
+    height: auto;
     margin-bottom: 20px;
-    color: #6DE87D;
+    opacity: 100%;
+    filter: brightness(100%);
 }
 
 .porqueCard p{
@@ -551,9 +577,8 @@ main img{
     margin-bottom: 30px;
 }
 
-.contatoInfoCard i{
-    color: #6DE87D;
-    font-size: 70px;
+.contatoInfoCard img{
+    width: 80px;
 }
 
 .contatoInfoCard h3{
@@ -592,9 +617,9 @@ main img{
     position: relative;
 }
 
-.arrowContainer i{
+.arrowContainer .arrow{
     position: absolute;
-    font-size: 25px;
+    width: 25px;
     cursor: pointer;
     z-index: 99;
 }
@@ -627,28 +652,33 @@ footer img{
     justify-content: space-between;
 }
 
-.footerSocialIcons i{
-    font-size: 22px;
+.footerSocialIcons a{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerSocialIcons a{
     cursor: pointer;
     background-color: #6DE87D;
-    color: white;
-    border-radius: 50%;
-    padding: 0.6em;
-    text-align: center;
-    font-weight: 600;
+    width: 50px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     transition: .5s;
     margin: 0 15px;
-    text-decoration: none;
+    border-radius: 50%;
 }
 
-.footerSocialIcons i:hover{
+.footerSocialIcons img{
+    width: 50px;
+    padding: 0.65em;
+}
+
+.footerSocialIcons a:hover{
     background-color: #4BC160;
 }
 
-.footerUpIcon i{
-    font-size: 30px;
-    padding: 0.65em;
+.footerUpIcon img{
+    width: 65px;
+    padding: 1em;
     background-color: #6DE87D;
     color: white;
     border-radius: 50%;
@@ -657,7 +687,7 @@ footer img{
     transition: 1s;
 }
 
-.footerUpIcon i:hover{
+.footerUpIcon img:hover{
     background-color: #4BC160;
     transform: rotate(360deg)
 }
@@ -683,6 +713,7 @@ footer img{
         font-size: 3vw;
         background-color: #6DE87D;
         color: white;
+        fill: white;
     }
     main{
         height: 400px;
@@ -787,11 +818,8 @@ footer img{
         grid-template-rows: 1fr 1fr 1fr 1fr;
         width: 95%;
     }
-    .porqueCard i{
-        font-size: 40px;
-    }
     .porqueCard h3{
-        font-size: 35px;
+        font-size: 30px;
     }
     .porqueCard p{
         font-size: 15px
@@ -851,6 +879,7 @@ footer img{
         font-size: 16px;
         background-color: #6DE87D;
         color: white;
+        fill: white;
     }
     main{
         height: 500px;
@@ -913,40 +942,26 @@ footer img{
         width: 140px;
         height: 140px;
     }
-    .porqueContainer{
-        height: 800px;
-    }
-    .porqueContainer img{
-        height: 100%;
-    }
+    
     .porqueContainer h2{
         font-size: 50px;
         border: none;
         margin-left: 5px;
         margin-right: 5px;
         margin-bottom: 10px;
-        margin-top: 0;
+        margin-top: 30px;
         top: 25px;
     }
     .porqueCards{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        width: 90%;
-        height: 70%;
-        bottom: 60px;
-    }
-    .porqueCard{
-        padding: 20px 10px;
-        margin: 0;
-    }
-    .porqueCard i{
-        font-size: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 70%;
     }
     .porqueCard h3{
-        font-size: 30px;
+        font-size: 35px;
     }
     .porqueCard p{
-        font-size: 15px
+        font-size: 20px
     }
     .contato{
         flex-direction: column;

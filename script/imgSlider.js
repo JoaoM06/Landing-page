@@ -41,7 +41,7 @@ arrowLeft.addEventListener("click", moveLeft)
 
 // Navbar e voltar ao topo:
 
-const voltarInicio = document.querySelector(".footerUpIcon i")
+const voltarInicio = document.querySelector(".footerUpIcon img")
 const bodyScrl = document.querySelector("*")
 const home = document.querySelector("#home")
 const services = document.querySelector("#services")
