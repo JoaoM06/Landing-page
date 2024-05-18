@@ -613,6 +613,10 @@ main img{
     scroll-snap-align: center;
 }
 
+#lastImg{
+    padding-right: calc(100%/3);
+}
+
 .arrowContainer{
     position: relative;
 }
@@ -804,9 +808,6 @@ footer img{
         width: 140px;
         height: 140px;
     }
-    .porqueContainer img{
-        height: 1370px;
-    }
     .porqueContainer h2{
         font-size: 45px;
         border: none;
@@ -862,6 +863,9 @@ footer img{
     }
     .relacionados .img img{
         width: 150px;
+    }
+    #lastImg{
+        padding-right: 0;
     }
     .footerSocialIcons{
         display: none;
@@ -982,6 +986,9 @@ footer img{
     .relacionados .img img{
         width: 150px;
     }
+    #lastImg{
+        padding-right: 0px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1024px){
@@ -1014,12 +1021,6 @@ footer img{
         .galeria img{
             width: 200px;
             height: 200px;
-        }
-        .porqueContainer{
-            height: 850px;
-        }
-        .porqueContainer img{
-            height: 850px;
         }
         .porqueCards{
             grid-template-columns: 1fr 1fr;
