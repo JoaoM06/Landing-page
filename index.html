@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KH67HMQ');
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poda Carioca</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH67HMQ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header>
         <img src="imgs/Logo-PodaCarioca-transparente.png" alt="Logo Poda Carioca">
         <nav class="navBar">
@@ -160,12 +175,16 @@
         <article class="contato">
             <div class="contatoFormContainer">
                 <h3>Envie uma mensagem</h3>
-                <form class="contatoForm">
+                <form class="contatoForm" action="https://formsubmit.co/contato.podacarioca@gmail.com" method="POST">
+
                     <input type="text" placeholder="Nome:" id="nome" name="nome" required>
                     <input type="email" placeholder="E-mail:" id="email" name="email" required>
                     <input type="tel" placeholder="Telefone:" id="tel" name="tel">
                     <input type="text" placeholder="Assunto:" id="assunto" name="assunto">
                     <textarea placeholder="Mensagem:" id="mensagem" name="mensagem"></textarea>
+
+                    <input type="hidden" name="_next" value="https://podacarioca.com.br">
+                    <input type="hidden" name="_captcha" value="false">
                     <button type="submit">Enviar</button>
                 </form>
             </div>
